@@ -22,6 +22,9 @@ MAINTAINERCLEANFILES	= Makefile.in
 
 ## @start 1
 bin_PROGRAMS = foonly
+## we want a program called 'foonly' to be built and installed in the 'bin' directory when make install is run.
+
 foonly_SOURCES = main.c foo.c foo.h nly.c scanner.l parser.y
+## lex and yacc both generate intermediate files and link them into the final executable.
 foonly_LDADD = @LEXLIB@
 ## @end 1
